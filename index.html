@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sai Vishal Matcha – Full-Stack Engineer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     * {
       margin: 0;
@@ -73,13 +74,14 @@
       width: 100%;
     }
 
-    /* Hero Section */
+    /* Sections */
     section {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 4rem;
     }
 
+    /* Hero */
     .hero {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -115,6 +117,7 @@
       display: flex;
       gap: 1.5rem;
       margin-top: 3rem;
+      flex-wrap: wrap;
     }
 
     .btn {
@@ -166,13 +169,18 @@
       display: flex;
       gap: 1.5rem;
       margin-top: 2rem;
+      flex-wrap: wrap;
     }
 
     .social-links a {
       color: #1a1a1a;
       text-decoration: none;
       font-size: 0.9rem;
+      font-weight: 600;
       transition: opacity 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
     .social-links a:hover {
@@ -229,9 +237,196 @@
       margin-bottom: 0.2rem;
     }
 
+    /* Tech Stack Section */
+    .tech-stack {
+      padding: 6rem 4rem;
+      background: #f9f9f9;
+    }
+
+    .tech-stack h2 {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      font-weight: 700;
+    }
+
+    .tech-carousel {
+      position: relative;
+      overflow: hidden;
+      background: white;
+      border-radius: 0.5rem;
+      padding: 2rem;
+    }
+
+    .tech-scroll {
+      display: flex;
+      gap: 2rem;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding: 1rem 0;
+      scrollbar-width: none;
+    }
+
+    .tech-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .tech-item {
+      flex: 0 0 auto;
+      width: 160px;
+      height: 140px;
+      background: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-align: center;
+    }
+
+    .tech-item:hover {
+      transform: translateY(-8px);
+      border-color: #1a1a1a;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      background: #f9f9f9;
+    }
+
+    .tech-item img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+
+    .tech-item .name {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    /* Projects Section */
+    .projects {
+      padding: 6rem 4rem;
+    }
+
+    .projects h2 {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      font-weight: 700;
+    }
+
+    .projects-showcase {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 3rem;
+    }
+
+    .mac-window {
+      background: #f5f5f5;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s;
+    }
+
+    .mac-window:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+    }
+
+    .mac-header {
+      background: #e0e0e0;
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      border-bottom: 1px solid #d0d0d0;
+    }
+
+    .mac-dots {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .mac-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #e0e0e0;
+    }
+
+    .mac-dot.red {
+      background: #ff5f56;
+    }
+
+    .mac-dot.yellow {
+      background: #ffbd2e;
+    }
+
+    .mac-dot.green {
+      background: #27c93f;
+    }
+
+    .mac-title {
+      font-size: 0.85rem;
+      color: #666;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 500;
+    }
+
+    .mac-content {
+      width: 100%;
+      height: 250px;
+      background: white;
+      overflow: hidden;
+    }
+
+    .mac-content img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-info {
+      padding: 1.5rem;
+      background: white;
+    }
+
+    .project-info h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .project-info p {
+      font-size: 0.9rem;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tech-tag {
+      background: #f0f0f0;
+      color: #666;
+      padding: 0.3rem 0.75rem;
+      border-radius: 0.25rem;
+      font-size: 0.8rem;
+    }
+
     /* Skills Section */
     .skills {
       padding: 6rem 4rem;
+      background: white;
     }
 
     .skills h2 {
@@ -327,66 +522,10 @@
       color: #999;
     }
 
-    /* Projects Section */
-    .projects {
-      padding: 6rem 4rem;
-    }
-
-    .projects h2 {
-      font-size: 2.5rem;
-      margin-bottom: 3rem;
-      font-weight: 700;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 3rem;
-    }
-
-    .project {
-      padding: 2rem;
-      border: 1px solid #e0e0e0;
-      border-radius: 0.5rem;
-      transition: all 0.3s;
-    }
-
-    .project:hover {
-      border-color: #1a1a1a;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    }
-
-    .project h3 {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-      font-weight: 600;
-    }
-
-    .project p {
-      color: #666;
-      font-size: 0.95rem;
-      line-height: 1.7;
-      margin-bottom: 1rem;
-    }
-
-    .tech-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .tech-tag {
-      background: #f0f0f0;
-      color: #666;
-      padding: 0.3rem 0.75rem;
-      border-radius: 0.25rem;
-      font-size: 0.85rem;
-    }
-
     /* Contact Section */
     .contact {
       padding: 6rem 4rem;
-      background: #f9f9f9;
+      background: white;
       text-align: center;
     }
 
@@ -461,10 +600,6 @@
       .skills-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
     }
 
     @media (max-width: 768px) {
@@ -484,10 +619,6 @@
         font-size: 2rem;
       }
 
-      .hero-content .intro {
-        font-size: 1rem;
-      }
-
       .skills-grid {
         grid-template-columns: 1fr;
       }
@@ -499,9 +630,12 @@
       .contact-links {
         gap: 1rem;
       }
+
+      .projects-showcase {
+        grid-template-columns: 1fr;
+      }
     }
 
-    /* Animations */
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -523,9 +657,9 @@
     <div class="nav-brand">SAI VISHAL</div>
     <ul>
       <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
+      <li><a href="#tech">Tech Stack</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -541,9 +675,18 @@
           <a href="#contact" class="btn btn-secondary">Get in Touch</a>
         </div>
         <div class="social-links">
-          <a href="https://github.com/VishaMatcha" target="_blank">GitHub</a>
-          <a href="https://linkedin.com/in/saivishalmatcha" target="_blank">LinkedIn</a>
-          <a href="mailto:matchasaivishal@gmail.com">Email</a>
+          <a href="https://github.com/VishaMatcha" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://linkedin.com/in/sai-vishal-matcha-bb6953215/" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://leetcode.com/u/vishalmatcha/" target="_blank">
+            <i class="fas fa-code"></i> LeetCode
+          </a>
+          <a href="mailto:matchasaivishal@gmail.com">
+            <i class="fas fa-envelope"></i> Email
+          </a>
         </div>
       </div>
     </div>
@@ -574,6 +717,232 @@
           <div class="detail">Amrita Vishwa Vidyapeetham, Bangalore</div>
           <div class="detail">Aug 2019 – Apr 2023</div>
           <div class="detail">GPA: 8.51/10.0</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tech" class="tech-stack">
+    <h2>Tech Stack</h2>
+    <div class="tech-carousel">
+      <div class="tech-scroll">
+        <div class="tech-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python">
+          <span class="name">Python</span>
+        </div>
+        <div class="tech-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java">
+          <span class="name">Java</span>
+        </div>
+        <div class="tech-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg" alt="Go">
+          <span class="name">Go</span>
+        </div>
+        <div class="tech-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript">
+          <span class="name">TypeScript</span>
+        </div>
+        <div class="tech-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React">
+          <span class="name">React</span>
+        </div>
+        <div class="tech-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js">
+          <span class="name">Node.js</span>
+        </div>
+        <div class="tech-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" alt="FastAPI">
+          <span class="name">FastAPI</span>
+        </div>
+        <div class="tech-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" alt="Spring">
+          <span class="name">Spring</span>
+        </div>
+        <div class="tech-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+          <span class="name">PostgreSQL</span>
+        </div>
+        <div class="tech-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+          <span class="name">MongoDB</span>
+        </div>
+        <div class="tech-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker">
+          <span class="name">Docker</span>
+        </div>
+        <div class="tech-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg" alt="Kubernetes">
+          <span class="name">Kubernetes</span>
+        </div>
+        <div class="tech-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/aws/aws-original.svg" alt="AWS">
+          <span class="name">AWS</span>
+        </div>
+        <div class="tech-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git">
+          <span class="name">Git</span>
+        </div>
+        <div class="tech-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apache/apache-original.svg" alt="Apache">
+          <span class="name">Apache</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects & Work</h2>
+    <div class="projects-showcase">
+      <div class="mac-window">
+        <div class="mac-header">
+          <div class="mac-dots">
+            <div class="mac-dot red"></div>
+            <div class="mac-dot yellow"></div>
+            <div class="mac-dot green"></div>
+          </div>
+          <div class="mac-title">Memphis Public Safety Dashboard</div>
+        </div>
+        <div class="mac-content">
+          <img src="projects/dashboard.jpg" alt="Memphis Public Safety Dashboard">
+        </div>
+        <div class="project-info">
+          <h3>Memphis Public Safety Analytics</h3>
+          <p>Real-time incident tracking and analytics dashboard with data visualization and KPI monitoring.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Data Viz</span>
+            <span class="tech-tag">Analytics</span>
+            <span class="tech-tag">Dashboard</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mac-window">
+        <div class="mac-header">
+          <div class="mac-dots">
+            <div class="mac-dot red"></div>
+            <div class="mac-dot yellow"></div>
+            <div class="mac-dot green"></div>
+          </div>
+          <div class="mac-title">RAG Chatbot</div>
+        </div>
+        <div class="mac-content" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center;">
+          <div style="color: white; text-align: center;">
+            <i class="fas fa-robot" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+            <p>Retrieval-Augmented Generation System</p>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>RAG Chatbot for Knowledge Retrieval</h3>
+          <p>Semantic search chatbot handling 500+ queries at 2s latency with FastAPI and FAISS.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">FastAPI</span>
+            <span class="tech-tag">NLP</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mac-window">
+        <div class="mac-header">
+          <div class="mac-dots">
+            <div class="mac-dot red"></div>
+            <div class="mac-dot yellow"></div>
+            <div class="mac-dot green"></div>
+          </div>
+          <div class="mac-title">Logistics Tracker</div>
+        </div>
+        <div class="mac-content" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center;">
+          <div style="color: white; text-align: center;">
+            <i class="fas fa-map-location-dot" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+            <p>Real-time Logistics System</p>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>RINL Logistics Tracker</h3>
+          <p>Full-stack logistics management with microservices, real-time tracking, and ML dashboards.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Spring Boot</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mac-window">
+        <div class="mac-header">
+          <div class="mac-dots">
+            <div class="mac-dot red"></div>
+            <div class="mac-dot yellow"></div>
+            <div class="mac-dot green"></div>
+          </div>
+          <div class="mac-title">AI Campaign Agent</div>
+        </div>
+        <div class="mac-content" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); display: flex; align-items: center; justify-content: center;">
+          <div style="color: white; text-align: center;">
+            <i class="fas fa-brain" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+            <p>AI-Powered Solutions</p>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>AI Agent for Campaign Optimization</h3>
+          <p>A2A-integrated AI agent for Adobe Journey Optimizer generating loyalty-based recommendations.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">AI/LLM</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Adobe API</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mac-window">
+        <div class="mac-header">
+          <div class="mac-dots">
+            <div class="mac-dot red"></div>
+            <div class="mac-dot yellow"></div>
+            <div class="mac-dot green"></div>
+          </div>
+          <div class="mac-title">Herald Service</div>
+        </div>
+        <div class="mac-content" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); display: flex; align-items: center; justify-content: center;">
+          <div style="color: white; text-align: center;">
+            <i class="fas fa-bell" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+            <p>Notification Platform</p>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>Herald Notification Service</h3>
+          <p>High-throughput microservice processing Kafka streams, reduced costs by 90%+.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Go</span>
+            <span class="tech-tag">Kafka</span>
+            <span class="tech-tag">Kubernetes</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mac-window">
+        <div class="mac-header">
+          <div class="mac-dots">
+            <div class="mac-dot red"></div>
+            <div class="mac-dot yellow"></div>
+            <div class="mac-dot green"></div>
+          </div>
+          <div class="mac-title">ML Pipeline</div>
+        </div>
+        <div class="mac-content" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); display: flex; align-items: center; justify-content: center;">
+          <div style="color: white; text-align: center;">
+            <i class="fas fa-database" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+            <p>Data Processing</p>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>ML Data Pipeline (Databricks)</h3>
+          <p>Scalable ETL workflows using Apache Spark, reduced response times by 30%.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Spark</span>
+            <span class="tech-tag">Databricks</span>
+            <span class="tech-tag">ETL</span>
+          </div>
         </div>
       </div>
     </div>
@@ -716,85 +1085,15 @@
     </div>
   </section>
 
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <div class="project">
-        <h3>RAG Chatbot</h3>
-        <p>Retrieval-augmented generation chatbot using Python and FastAPI. Optimized semantic search by 30%, handling 500+ queries at 2s latency with reusable components.</p>
-        <div class="tech-tags">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">FastAPI</span>
-          <span class="tech-tag">FAISS</span>
-          <span class="tech-tag">NLP</span>
-        </div>
-      </div>
-
-      <div class="project">
-        <h3>AI Campaign Agent</h3>
-        <p>A2A-integrated AI agent ingesting customer data to generate loyalty-based ad recommendations for Adobe Journey Optimizer at scale.</p>
-        <div class="tech-tags">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">AI/LLM</span>
-          <span class="tech-tag">Adobe API</span>
-          <span class="tech-tag">Data Pipeline</span>
-        </div>
-      </div>
-
-      <div class="project">
-        <h3>RINL Logistics Tracker</h3>
-        <p>Full-stack logistics management system with microservices, real-time tracking, database optimization, and ML dashboards deployed on cloud.</p>
-        <div class="tech-tags">
-          <span class="tech-tag">Spring Boot</span>
-          <span class="tech-tag">FastAPI</span>
-          <span class="tech-tag">React</span>
-          <span class="tech-tag">PostgreSQL</span>
-        </div>
-      </div>
-
-      <div class="project">
-        <h3>Herald Notification Service</h3>
-        <p>High-throughput push-notification microservice processing Kafka event streams. Refactored Kubernetes HPA reducing costs 90%+.</p>
-        <div class="tech-tags">
-          <span class="tech-tag">Go</span>
-          <span class="tech-tag">Kafka</span>
-          <span class="tech-tag">Kubernetes</span>
-          <span class="tech-tag">Python</span>
-        </div>
-      </div>
-
-      <div class="project">
-        <h3>ML Data Pipeline</h3>
-        <p>Scalable ETL workflows using Apache Spark and Databricks, reducing response times by 30% with advanced data modeling.</p>
-        <div class="tech-tags">
-          <span class="tech-tag">Spark</span>
-          <span class="tech-tag">Databricks</span>
-          <span class="tech-tag">ETL</span>
-          <span class="tech-tag">Git CI/CD</span>
-        </div>
-      </div>
-
-      <div class="project">
-        <h3>Secret Key Store</h3>
-        <p>Internal credential management system built with Go and React, resolving global scaling bottleneck and enabling sustainable growth.</p>
-        <div class="tech-tags">
-          <span class="tech-tag">Go</span>
-          <span class="tech-tag">React</span>
-          <span class="tech-tag">Security</span>
-          <span class="tech-tag">TypeScript</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section id="contact" class="contact">
     <h2>Let's Work Together</h2>
     <p>I'm always interested in discussing new projects, opportunities, and challenging problems.</p>
     <div class="contact-links">
-      <a href="mailto:matchasaivishal@gmail.com">Email</a>
-      <a href="https://github.com/VishaMatcha" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/saivishalmatcha" target="_blank">LinkedIn</a>
-      <a href="tel:+12145314657">Call</a>
+      <a href="mailto:matchasaivishal@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+      <a href="https://github.com/VishaMatcha" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://linkedin.com/in/sai-vishal-matcha-bb6953215/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://leetcode.com/u/vishalmatcha/" target="_blank"><i class="fas fa-code"></i> LeetCode</a>
+      <a href="tel:+12145314657"><i class="fas fa-phone"></i> Call</a>
     </div>
   </section>
 
@@ -813,6 +1112,19 @@
         }
       });
     });
+
+    // Auto-scroll tech carousel
+    const techScroll = document.querySelector('.tech-scroll');
+    if (techScroll) {
+      let scrollAmount = 0;
+      setInterval(() => {
+        scrollAmount += 1;
+        techScroll.scrollLeft = scrollAmount;
+        if (scrollAmount > techScroll.scrollWidth - techScroll.clientWidth) {
+          scrollAmount = 0;
+        }
+      }, 30);
+    }
   </script>
 </body>
 </html>
