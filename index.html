@@ -29,32 +29,33 @@
       position: fixed;
       top: 0;
       width: 100%;
-      padding: 2rem 4rem;
+      padding: 1.5rem 2rem;
       background: rgba(255, 255, 255, 0.98);
       backdrop-filter: blur(10px);
       z-index: 1000;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     .nav-brand {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 600;
       letter-spacing: 1px;
+      margin-right: auto;
     }
 
     nav ul {
       display: flex;
       list-style: none;
-      gap: 3rem;
+      gap: 2.5rem;
     }
 
     nav a {
       color: #1a1a1a;
       text-decoration: none;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       transition: opacity 0.3s;
       position: relative;
     }
@@ -74,40 +75,41 @@
       width: 100%;
     }
 
-    /* Sections */
-    section {
-      max-width: 1200px;
+    /* Main Container */
+    .container {
+      max-width: 900px;
       margin: 0 auto;
-      padding: 0 4rem;
+      padding: 0 2rem;
     }
 
-    /* Hero */
+    /* Hero Section */
     .hero {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 5rem;
+      gap: 3rem;
       align-items: center;
       min-height: 100vh;
       padding-top: 8rem;
+      padding-bottom: 4rem;
     }
 
     .hero-content h1 {
-      font-size: 3.5rem;
-      line-height: 1.15;
-      margin-bottom: 1.5rem;
+      font-size: 2.8rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
       font-weight: 700;
-      letter-spacing: -1px;
+      letter-spacing: -0.5px;
     }
 
     .hero-content .intro {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #666;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       line-height: 1.8;
     }
 
     .hero-content p {
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: #777;
       margin-bottom: 1.5rem;
       line-height: 1.8;
@@ -115,17 +117,17 @@
 
     .cta-group {
       display: flex;
-      gap: 1.5rem;
-      margin-top: 3rem;
+      gap: 1rem;
+      margin-top: 2rem;
       flex-wrap: wrap;
     }
 
     .btn {
-      padding: 0.85rem 2rem;
+      padding: 0.75rem 1.75rem;
       border-radius: 0.3rem;
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       transition: all 0.3s;
       border: 1px solid #1a1a1a;
       cursor: pointer;
@@ -167,94 +169,92 @@
 
     .social-links {
       display: flex;
-      gap: 1.5rem;
-      margin-top: 2rem;
+      gap: 1rem;
+      margin-top: 1.5rem;
       flex-wrap: wrap;
     }
 
     .social-links a {
       color: #1a1a1a;
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       font-weight: 600;
       transition: opacity 0.3s;
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.4rem;
     }
 
     .social-links a:hover {
       opacity: 0.6;
     }
 
-    /* About Section */
-    .about {
-      padding: 6rem 4rem;
-      margin-top: 4rem;
+    /* Section Styles */
+    section {
+      padding: 4rem 0;
     }
 
-    .about h2, .experience h2, .projects h2, .skills h2 {
-      font-size: 2.5rem;
-      margin-bottom: 3rem;
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 2.5rem;
       font-weight: 700;
+      text-align: center;
     }
 
+    /* About Section */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 4rem;
+      gap: 3rem;
     }
 
     .about-text p {
-      margin-bottom: 1.5rem;
-      font-size: 1.05rem;
+      margin-bottom: 1.2rem;
+      font-size: 0.95rem;
       color: #666;
       line-height: 1.8;
     }
 
     .education-block {
       background: #f9f9f9;
-      padding: 2rem;
+      padding: 1.5rem;
       border-radius: 0.5rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.2rem;
     }
 
     .education-block h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
       font-weight: 600;
     }
 
     .education-block .degree {
       color: #1a1a1a;
       font-weight: 600;
-      margin-bottom: 0.3rem;
+      font-size: 0.9rem;
+      margin-bottom: 0.2rem;
     }
 
     .education-block .detail {
       color: #777;
-      font-size: 0.95rem;
+      font-size: 0.85rem;
+      margin-bottom: 0.1rem;
     }
 
     /* Tech Stack */
-    .tech-stack {
-      padding: 6rem 4rem;
-      background: #f9f9f9;
-    }
-
     .tech-carousel {
-      background: white;
+      background: #f9f9f9;
       border-radius: 0.5rem;
-      padding: 2rem;
+      padding: 1.5rem;
       overflow: hidden;
     }
 
     .tech-scroll {
       display: flex;
-      gap: 2rem;
+      gap: 1.5rem;
       overflow-x: auto;
       scroll-behavior: smooth;
-      padding: 1rem 0;
+      padding: 0.5rem 0;
       scrollbar-width: none;
     }
 
@@ -264,276 +264,242 @@
 
     .tech-item {
       flex: 0 0 auto;
-      width: 140px;
-      height: 120px;
+      width: 120px;
+      height: 100px;
       background: white;
       border: 1px solid #e0e0e0;
-      border-radius: 0.5rem;
-      padding: 1.5rem;
+      border-radius: 0.4rem;
+      padding: 1rem;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 0.75rem;
+      gap: 0.5rem;
       cursor: pointer;
       transition: all 0.3s;
       text-align: center;
     }
 
     .tech-item:hover {
-      transform: translateY(-8px);
+      transform: translateY(-6px);
       border-color: #1a1a1a;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-      background: #f9f9f9;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
     }
 
     .tech-item img {
-      width: 45px;
-      height: 45px;
+      width: 40px;
+      height: 40px;
       object-fit: contain;
     }
 
     .tech-item .name {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       font-weight: 600;
       color: #1a1a1a;
     }
 
-    /* Projects Stacking Section */
-    .projects {
-      padding: 6rem 4rem;
-      background: white;
-    }
-
-    .projects-container {
+    /* Experience Section */
+    .experience-timeline {
       position: relative;
-      height: 800px;
-      margin: 4rem 0;
+      padding: 2rem 0;
     }
 
-    .project-stack {
+    .experience-timeline::before {
+      content: '';
       position: absolute;
-      width: 100%;
-      max-width: 500px;
       left: 50%;
       transform: translateX(-50%);
-    }
-
-    .project-card {
-      background: white;
-      border-radius: 0.75rem;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s;
-      cursor: pointer;
-    }
-
-    .project-card:hover {
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-    }
-
-    .mac-header {
-      background: #e0e0e0;
-      padding: 0.75rem 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      border-bottom: 1px solid #d0d0d0;
-    }
-
-    .mac-dots {
-      display: flex;
-      gap: 0.5rem;
-    }
-
-    .mac-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-    }
-
-    .mac-dot.red { background: #ff5f56; }
-    .mac-dot.yellow { background: #ffbd2e; }
-    .mac-dot.green { background: #27c93f; }
-
-    .mac-title {
-      font-size: 0.85rem;
-      color: #666;
-      margin: 0 auto;
-      font-weight: 500;
-    }
-
-    .project-image {
-      width: 100%;
-      height: 300px;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-align: center;
-    }
-
-    .project-image img {
-      width: 100%;
+      width: 2px;
       height: 100%;
-      object-fit: cover;
+      background: #e0e0e0;
     }
 
-    .project-info {
-      padding: 2rem;
+    .job-wrapper {
+      margin-bottom: 3rem;
+      position: relative;
     }
 
-    .project-info h3 {
-      font-size: 1.25rem;
+    .job-wrapper:nth-child(odd) .job-card {
+      margin-left: 0;
+      margin-right: 52%;
+    }
+
+    .job-wrapper:nth-child(even) .job-card {
+      margin-left: 52%;
+      margin-right: 0;
+    }
+
+    .job-wrapper::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 2rem;
+      transform: translateX(-50%);
+      width: 16px;
+      height: 16px;
+      background: white;
+      border: 3px solid #1a1a1a;
+      border-radius: 50%;
+      z-index: 10;
+    }
+
+    .job-card {
+      background: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    }
+
+    .job-card:hover {
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .job-logo-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
       margin-bottom: 1rem;
-      font-weight: 600;
     }
 
-    .project-info p {
-      font-size: 0.95rem;
+    .job-logo-header img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+
+    .job-logo-header .job-title {
+      flex: 1;
+    }
+
+    .job-logo-header h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+
+    .job-company {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #0066cc;
+      margin-bottom: 0.3rem;
+    }
+
+    .job-period {
+      color: #999;
+      font-size: 0.85rem;
+    }
+
+    .job-workflow {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #f0f0f0;
+    }
+
+    .workflow-step {
+      display: flex;
+      gap: 0.8rem;
+      margin-bottom: 0.8rem;
+      font-size: 0.9rem;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    .workflow-step strong {
+      color: #1a1a1a;
+      min-width: 80px;
+    }
+
+    /* Projects Section */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .github-project {
+      background: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+
+    .github-project:hover {
+      border-color: #1a1a1a;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      transform: translateY(-4px);
+    }
+
+    .project-header {
+      background: #f9f9f9;
+      padding: 1.2rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .project-header h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    .project-link {
+      color: #0066cc;
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+
+    .project-link:hover {
+      opacity: 0.7;
+    }
+
+    .project-body {
+      padding: 1.2rem;
+    }
+
+    .project-body p {
+      font-size: 0.9rem;
       color: #666;
       line-height: 1.6;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-stats {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.85rem;
+      color: #999;
+      margin-bottom: 1rem;
     }
 
     .tech-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 0.4rem;
     }
 
     .tech-tag {
       background: #f0f0f0;
       color: #666;
-      padding: 0.4rem 0.85rem;
+      padding: 0.3rem 0.7rem;
       border-radius: 0.25rem;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       font-weight: 500;
     }
 
-    /* Experience Section */
-    .experience {
-      padding: 6rem 4rem;
-      background: #f9f9f9;
-    }
-
-    .experience-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 3rem;
-    }
-
-    .job-card {
-      border-radius: 0.75rem;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      transition: all 0.3s;
-      display: grid;
-      grid-template-columns: 200px 1fr;
-    }
-
-    .job-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-    }
-
-    .job-logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-      font-size: 3rem;
-    }
-
-    /* Company-specific colors and designs */
-    .amazon-card .job-logo {
-      background: linear-gradient(135deg, #FF9900 0%, #FF6B35 100%);
-      color: white;
-    }
-
-    .adobe-card .job-logo {
-      background: linear-gradient(135deg, #FF0000 0%, #C41E3A 100%);
-      color: white;
-    }
-
-    .databricks-card .job-logo {
-      background: linear-gradient(135deg, #00B4D8 0%, #0096C7 100%);
-      color: white;
-    }
-
-    .rinl-card .job-logo {
-      background: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%);
-      color: white;
-    }
-
-    .job-content {
-      padding: 2.5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background: white;
-    }
-
-    .job-header {
-      margin-bottom: 1.5rem;
-    }
-
-    .job-content h3 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 0.3rem;
-    }
-
-    .job-company {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .job-period {
-      color: #999;
-      font-size: 0.9rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .job-content ul {
-      list-style: none;
-    }
-
-    .job-content li {
-      padding: 0.6rem 0;
-      color: #666;
-      font-size: 0.95rem;
-      line-height: 1.7;
-    }
-
-    .job-content li::before {
-      content: '→';
-      margin-right: 0.75rem;
-      color: #999;
-      font-weight: bold;
-    }
-
     /* Skills Section */
-    .skills {
-      padding: 6rem 4rem;
-      background: white;
-    }
-
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 3rem;
+      gap: 2rem;
     }
 
     .skill-group h3 {
-      font-size: 1.15rem;
-      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
       font-weight: 600;
     }
 
@@ -542,34 +508,26 @@
     }
 
     .skill-group li {
-      padding: 0.6rem 0;
+      padding: 0.4rem 0;
       color: #777;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
     }
 
     /* Contact Section */
     .contact {
-      padding: 6rem 4rem;
-      background: #f9f9f9;
       text-align: center;
     }
 
-    .contact h2 {
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-      font-weight: 700;
-    }
-
     .contact p {
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: #666;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
     }
 
     .contact-links {
       display: flex;
       justify-content: center;
-      gap: 2rem;
+      gap: 1.5rem;
       flex-wrap: wrap;
     }
 
@@ -577,6 +535,7 @@
       color: #1a1a1a;
       text-decoration: none;
       font-weight: 600;
+      font-size: 0.9rem;
       transition: opacity 0.3s;
     }
 
@@ -586,34 +545,60 @@
 
     /* Footer */
     footer {
-      padding: 2rem 4rem;
+      padding: 2rem 0;
       text-align: center;
       color: #999;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       border-top: 1px solid #e0e0e0;
+      margin-top: 3rem;
     }
 
     /* Responsive */
-    @media (max-width: 1024px) {
-      nav { padding: 1.5rem 2rem; }
-      nav ul { gap: 2rem; }
-      section { padding: 0 2rem; }
-      .hero { grid-template-columns: 1fr; gap: 3rem; padding-top: 6rem; }
-      .hero-content h1 { font-size: 2.5rem; }
-      .about-grid { grid-template-columns: 1fr; }
-      .skills-grid { grid-template-columns: repeat(2, 1fr); }
-      .job-card { grid-template-columns: 1fr; }
-      .job-logo { padding: 1.5rem; font-size: 2rem; }
-    }
-
     @media (max-width: 768px) {
-      nav { padding: 1rem; flex-direction: column; gap: 1rem; }
-      nav ul { gap: 1rem; flex-direction: column; text-align: center; }
-      .hero-content h1 { font-size: 2rem; }
-      .skills-grid { grid-template-columns: 1fr; }
-      .contact-links { gap: 1rem; }
-      .projects-container { height: auto; }
-      .project-stack { position: relative; margin: 2rem 0; }
+      nav { flex-direction: column; gap: 1rem; }
+      nav ul { gap: 1.5rem; }
+      .nav-brand { margin-right: 0; }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding-top: 6rem;
+      }
+
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-timeline::before {
+        left: 0;
+      }
+
+      .job-wrapper::before {
+        left: 0;
+      }
+
+      .job-wrapper:nth-child(odd) .job-card,
+      .job-wrapper:nth-child(even) .job-card {
+        margin-left: 30px;
+        margin-right: 0;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
     }
 
     @keyframes fadeIn {
@@ -631,19 +616,19 @@
     <div class="nav-brand">SAI VISHAL</div>
     <ul>
       <li><a href="#about">About</a></li>
-      <li><a href="#tech">Tech Stack</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="#tech">Tech</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <section class="hero">
-    <div class="hero-content">
-      <div>
+  <div class="container">
+    <section class="hero">
+      <div class="hero-content">
         <h1>Full-Stack Engineer & AI/LLM Specialist</h1>
-        <p class="intro">Designing scalable backend systems and AI-powered solutions at Amazon.</p>
-        <p>5+ years building production systems. Currently focused on AI/LLM initiatives. Passionate about system design, clean code, and solving complex technical problems.</p>
+        <p class="intro">Building scalable systems and AI-powered solutions at Amazon. 5+ years of production experience.</p>
+        <p>Passionate about system design, clean code, and solving complex technical challenges. Expertise in backend systems, cloud infrastructure, ML pipelines, and data processing.</p>
         <div class="cta-group">
           <a href="#projects" class="btn btn-primary">View Projects</a>
           <a href="#contact" class="btn btn-secondary">Get in Touch</a>
@@ -663,407 +648,371 @@
           </a>
         </div>
       </div>
-    </div>
-    <div class="hero-image">
-      <img src="photo.jpg" alt="Sai Vishal Matcha">
-    </div>
-  </section>
-
-  <section id="about" class="about">
-    <h2>About</h2>
-    <div class="about-grid">
-      <div>
-        <p>Full-stack software engineer with 5+ years of experience building scalable backend systems, AI/LLM pipelines, and complete full-stack applications. Currently at Amazon supporting AI/LLM initiatives.</p>
-        <p>Previously at Adobe, I architected AI agents, developed Kafka microservices for Herald push-notification platform, and built internal React/TypeScript tooling. At Databricks, I engineered ML data pipelines using Apache Spark.</p>
-        <p>Expertise spans backend systems (Spring Boot, FastAPI, gRPC), cloud infrastructure (AWS, Kubernetes), machine learning (TensorFlow, PyTorch), and data processing (Apache Spark, Kafka).</p>
+      <div class="hero-image">
+        <img src="photo.jpg" alt="Sai Vishal Matcha">
       </div>
-      <div>
-        <div class="education-block">
-          <h3>Master of Science</h3>
-          <div class="degree">Computer Science & Engineering</div>
-          <div class="detail">University of California, Riverside</div>
-          <div class="detail">Sep 2023 – Dec 2024 | GPA: 3.71/4.0</div>
-        </div>
-        <div class="education-block">
-          <h3>Bachelor of Technology</h3>
-          <div class="degree">Computer Science & Engineering</div>
-          <div class="detail">Amrita Vishwa Vidyapeetham, Bangalore</div>
-          <div class="detail">Aug 2019 – Apr 2023 | GPA: 8.51/10.0</div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="tech" class="tech-stack">
-    <h2>Tech Stack</h2>
-    <div class="tech-carousel">
-      <div class="tech-scroll">
-        <div class="tech-item">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python">
-          <span class="name">Python</span>
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Full-stack software engineer with 5+ years of experience designing and building scalable backend systems, AI/LLM pipelines, and complete full-stack applications across Python, Java, Go, and TypeScript.</p>
+          <p>Currently at Amazon supporting AI/LLM initiatives. Previously at Adobe architecting AI agents and Kafka-driven microservices. At Databricks engineered ML data pipelines using Apache Spark.</p>
+          <p>Strong background in system design, distributed systems, cloud infrastructure, and machine learning. Committed to writing clean, maintainable code and solving complex technical problems.</p>
         </div>
-        <div class="tech-item">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java">
-          <span class="name">Java</span>
-        </div>
-        <div class="tech-item">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg" alt="Go">
-          <span class="name">Go</span>
-        </div>
-        <div class="tech-item">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript">
-          <span class="name">TypeScript</span>
-        </div>
-        <div class="tech-item">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React">
-          <span class="name">React</span>
-        </div>
-        <div class="tech-item">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js">
-          <span class="name">Node.js</span>
-        </div>
-        <div class="tech-item">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" alt="FastAPI">
-          <span class="name">FastAPI</span>
-        </div>
-        <div class="tech-item">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" alt="Spring">
-          <span class="name">Spring</span>
-        </div>
-        <div class="tech-item">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
-          <span class="name">PostgreSQL</span>
-        </div>
-        <div class="tech-item">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="MongoDB">
-          <span class="name">MongoDB</span>
-        </div>
-        <div class="tech-item">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker">
-          <span class="name">Docker</span>
-        </div>
-        <div class="tech-item">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg" alt="Kubernetes">
-          <span class="name">Kubernetes</span>
-        </div>
-        <div class="tech-item">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/aws/aws-original.svg" alt="AWS">
-          <span class="name">AWS</span>
-        </div>
-        <div class="tech-item">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git">
-          <span class="name">Git</span>
-        </div>
-        <div class="tech-item">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apache/apache-original.svg" alt="Apache">
-          <span class="name">Apache</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" class="projects">
-    <h2>Projects & Work</h2>
-    <div class="projects-container">
-      <div class="project-stack" style="z-index: 5; --stack-index: 0;">
-        <div class="project-card">
-          <div class="mac-header">
-            <div class="mac-dots">
-              <div class="mac-dot red"></div>
-              <div class="mac-dot yellow"></div>
-              <div class="mac-dot green"></div>
-            </div>
-            <div class="mac-title">Memphis Public Safety Dashboard</div>
+        <div>
+          <div class="education-block">
+            <h3>Master of Science</h3>
+            <div class="degree">Computer Science & Engineering</div>
+            <div class="detail">UC Riverside | Sep 2023 – Dec 2024</div>
+            <div class="detail">GPA: 3.71/4.0</div>
           </div>
-          <div class="project-image">
-            <img src="projects/dashboard.jpg" alt="Memphis Dashboard" onerror="this.style.display='none'">
-            <div style="display: none;">
-              <i class="fas fa-chart-bar" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-              <p>Analytics Dashboard</p>
+          <div class="education-block">
+            <h3>Bachelor of Technology</h3>
+            <div class="degree">Computer Science & Engineering</div>
+            <div class="detail">Amrita Vishwa Vidyapeetham | Aug 2019 – Apr 2023</div>
+            <div class="detail">GPA: 8.51/10.0</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tech">
+      <h2>Tech Stack</h2>
+      <div class="tech-carousel">
+        <div class="tech-scroll">
+          <div class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python">
+            <span class="name">Python</span>
+          </div>
+          <div class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java">
+            <span class="name">Java</span>
+          </div>
+          <div class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg" alt="Go">
+            <span class="name">Go</span>
+          </div>
+          <div class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript">
+            <span class="name">TypeScript</span>
+          </div>
+          <div class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React">
+            <span class="name">React</span>
+          </div>
+          <div class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" alt="FastAPI">
+            <span class="name">FastAPI</span>
+          </div>
+          <div class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" alt="Spring">
+            <span class="name">Spring</span>
+          </div>
+          <div class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+            <span class="name">PostgreSQL</span>
+          </div>
+          <div class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker">
+            <span class="name">Docker</span>
+          </div>
+          <div class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg" alt="Kubernetes">
+            <span class="name">Kubernetes</span>
+          </div>
+          <div class="tech-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/aws/aws-original.svg" alt="AWS">
+            <span class="name">AWS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Professional Experience</h2>
+      <div class="experience-timeline">
+        <div class="job-wrapper">
+          <div class="job-card">
+            <div class="job-logo-header">
+              <img src="https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png" alt="Amazon">
+              <div class="job-title">
+                <h3>Software Engineer</h3>
+                <div class="job-company">Amazon – AGI Autonomy</div>
+                <div class="job-period">May 2025 – Present</div>
+              </div>
+            </div>
+            <div class="job-workflow">
+              <div class="workflow-step">
+                <strong>Pipeline:</strong> Designed Python automation for unstructured data processing
+              </div>
+              <div class="workflow-step">
+                <strong>Validation:</strong> Built SQL queries to evaluate LLM outputs (+25% accuracy)
+              </div>
+              <div class="workflow-step">
+                <strong>Instrumentation:</strong> Created trace-capture tools for AI agent training
+              </div>
             </div>
           </div>
-          <div class="project-info">
-            <h3>Memphis Public Safety Analytics</h3>
-            <p>Real-time incident tracking dashboard with KPI monitoring and data visualization.</p>
+        </div>
+
+        <div class="job-wrapper">
+          <div class="job-card">
+            <div class="job-logo-header">
+              <img src="https://www.adobe.com/content/dam/cc/icons/Adobe_Corporate_Horizontal_Red.svg" alt="Adobe">
+              <div class="job-title">
+                <h3>Software Engineer</h3>
+                <div class="job-company">Adobe – Journey Optimizer</div>
+                <div class="job-period">Sep 2023 – Apr 2025</div>
+              </div>
+            </div>
+            <div class="job-workflow">
+              <div class="workflow-step">
+                <strong>Architecture:</strong> Built AI agents in Python for campaign recommendations
+              </div>
+              <div class="workflow-step">
+                <strong>Services:</strong> Developed Go/Python microservices processing Kafka streams
+              </div>
+              <div class="workflow-step">
+                <strong>Optimization:</strong> Refactored Kubernetes HPA reducing costs by 90%+
+              </div>
+              <div class="workflow-step">
+                <strong>Tools:</strong> Designed internal React/TypeScript dashboards & Secret Key Store
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="job-wrapper">
+          <div class="job-card">
+            <div class="job-logo-header">
+              <img src="https://www.databricks.com/en/images/logos/databricks-logo.svg" alt="Databricks">
+              <div class="job-title">
+                <h3>Associate Software Engineer</h3>
+                <div class="job-company">Databricks</div>
+                <div class="job-period">Jun 2022 – Sep 2023</div>
+              </div>
+            </div>
+            <div class="job-workflow">
+              <div class="workflow-step">
+                <strong>Pipelines:</strong> Engineered ML data pipelines using Apache Spark (-30% latency)
+              </div>
+              <div class="workflow-step">
+                <strong>CI/CD:</strong> Architected workflows optimizing throughput by 35% with Kafka
+              </div>
+              <div class="workflow-step">
+                <strong>Debugging:</strong> Root cause analysis in Spark distributed environment
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="job-wrapper">
+          <div class="job-card">
+            <div class="job-logo-header">
+              <img src="https://www.rinl.com/en/images/logo.svg" alt="R.I.N.L" style="background: #f0f0f0; padding: 8px; border-radius: 4px;">
+              <div class="job-title">
+                <h3>Software Engineer Intern</h3>
+                <div class="job-company">R.I.N.L. – Rashtriya Ispat Nigam Limited</div>
+                <div class="job-period">Jun 2021 – Jun 2022</div>
+              </div>
+            </div>
+            <div class="job-workflow">
+              <div class="workflow-step">
+                <strong>Microservices:</strong> Implemented Spring Boot & FastAPI with real-time tracking
+              </div>
+              <div class="workflow-step">
+                <strong>Dashboards:</strong> Created React/Angular dashboards with Plotly Dash
+              </div>
+              <div class="workflow-step">
+                <strong>Database:</strong> Optimized PostgreSQL with indexing & caching (-40% latency)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Featured GitHub Projects</h2>
+      <div class="projects-grid">
+        <div class="github-project">
+          <div class="project-header">
+            <h3>Speechify Assessment</h3>
+            <a href="https://github.com/VishaMatcha/speechify" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+          </div>
+          <div class="project-body">
+            <p>Comprehensive technical assessment: credential security with bcrypt, query optimization with batch operations, error handling with taxonomy, test infrastructure with 204 tests, and CI/CD pipeline.</p>
+            <div class="project-stats">
+              <span><i class="fas fa-code-branch"></i> 1 Branch</span>
+              <span><i class="fas fa-check-circle"></i> 204 Tests Passing</span>
+            </div>
             <div class="tech-tags">
-              <span class="tech-tag">Data Viz</span>
-              <span class="tech-tag">Analytics</span>
+              <span class="tech-tag">Security</span>
+              <span class="tech-tag">Optimization</span>
+              <span class="tech-tag">CI/CD</span>
+              <span class="tech-tag">Testing</span>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="project-stack" style="z-index: 4; --stack-index: 1;">
-        <div class="project-card">
-          <div class="mac-header">
-            <div class="mac-dots">
-              <div class="mac-dot red"></div>
-              <div class="mac-dot yellow"></div>
-              <div class="mac-dot green"></div>
-            </div>
-            <div class="mac-title">RAG Chatbot</div>
-          </div>
-          <div class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-            <i class="fas fa-robot" style="font-size: 3rem; margin-bottom: 1rem; color: white;"></i>
-            <p style="color: white;">Retrieval-Augmented Generation</p>
-          </div>
-          <div class="project-info">
-            <h3>RAG Chatbot for Knowledge Retrieval</h3>
-            <p>Semantic search chatbot handling 500+ queries at 2s latency with FastAPI and FAISS.</p>
-            <div class="tech-tags">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">FastAPI</span>
-              <span class="tech-tag">NLP</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-stack" style="z-index: 3; --stack-index: 2;">
-        <div class="project-card">
-          <div class="mac-header">
-            <div class="mac-dots">
-              <div class="mac-dot red"></div>
-              <div class="mac-dot yellow"></div>
-              <div class="mac-dot green"></div>
-            </div>
-            <div class="mac-title">Logistics Tracker</div>
-          </div>
-          <div class="project-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-            <i class="fas fa-map-location-dot" style="font-size: 3rem; margin-bottom: 1rem; color: white;"></i>
-            <p style="color: white;">Real-time Tracking System</p>
-          </div>
-          <div class="project-info">
+        <div class="github-project">
+          <div class="project-header">
             <h3>RINL Logistics Tracker</h3>
-            <p>Full-stack logistics management with microservices, real-time tracking, and ML dashboards.</p>
+            <a href="https://github.com/VishaMatcha/rinl-logistics-tracker" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+          </div>
+          <div class="project-body">
+            <p>Full-stack logistics management system with Docker Compose setup, PostgreSQL optimization, real-time tracking via WebSockets, Angular dashboards, and comprehensive microservices architecture.</p>
+            <div class="project-stats">
+              <span><i class="fas fa-cube"></i> Docker</span>
+              <span><i class="fas fa-database"></i> PostgreSQL</span>
+            </div>
             <div class="tech-tags">
               <span class="tech-tag">Spring Boot</span>
-              <span class="tech-tag">React</span>
+              <span class="tech-tag">Angular</span>
+              <span class="tech-tag">Docker</span>
               <span class="tech-tag">PostgreSQL</span>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="project-stack" style="z-index: 2; --stack-index: 3;">
-        <div class="project-card">
-          <div class="mac-header">
-            <div class="mac-dots">
-              <div class="mac-dot red"></div>
-              <div class="mac-dot yellow"></div>
-              <div class="mac-dot green"></div>
+        <div class="github-project">
+          <div class="project-header">
+            <h3>Saivishal Portfolio</h3>
+            <a href="https://github.com/VishaMatcha/saivishal-portfolio" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+          </div>
+          <div class="project-body">
+            <p>Professional portfolio website showcasing projects and experience. Built with clean HTML/CSS/JavaScript, responsive design, GitHub Pages deployment, and modern UI/UX patterns.</p>
+            <div class="project-stats">
+              <span><i class="fas fa-globe"></i> GitHub Pages</span>
+              <span><i class="fas fa-mobile"></i> Responsive</span>
             </div>
-            <div class="mac-title">AI Campaign Agent</div>
-          </div>
-          <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-            <i class="fas fa-brain" style="font-size: 3rem; margin-bottom: 1rem; color: white;"></i>
-            <p style="color: white;">AI-Powered Solutions</p>
-          </div>
-          <div class="project-info">
-            <h3>AI Agent for Campaign Optimization</h3>
-            <p>A2A-integrated AI agent for Adobe Journey Optimizer generating loyalty-based recommendations.</p>
             <div class="tech-tags">
-              <span class="tech-tag">AI/LLM</span>
+              <span class="tech-tag">HTML/CSS</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">GitHub Pages</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="github-project">
+          <div class="project-header">
+            <h3>LeetCode Solutions</h3>
+            <a href="https://github.com/VishaMatcha" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+          </div>
+          <div class="project-body">
+            <p>Collection of algorithmic problem solutions in Python and Java. Covers data structures, dynamic programming, graph algorithms, and system design problems with optimized solutions.</p>
+            <div class="project-stats">
+              <span><i class="fas fa-code"></i> Algorithms</span>
+              <span><i class="fas fa-brain"></i> Problem Solving</span>
+            </div>
+            <div class="tech-tags">
               <span class="tech-tag">Python</span>
-              <span class="tech-tag">Adobe API</span>
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Algorithms</span>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="project-stack" style="z-index: 1; --stack-index: 4;">
-        <div class="project-card">
-          <div class="mac-header">
-            <div class="mac-dots">
-              <div class="mac-dot red"></div>
-              <div class="mac-dot yellow"></div>
-              <div class="mac-dot green"></div>
-            </div>
-            <div class="mac-title">Herald Notification Service</div>
-          </div>
-          <div class="project-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
-            <i class="fas fa-bell" style="font-size: 3rem; margin-bottom: 1rem; color: white;"></i>
-            <p style="color: white;">Notification Platform</p>
-          </div>
-          <div class="project-info">
-            <h3>Herald Notification Service</h3>
-            <p>High-throughput microservice processing Kafka streams, reduced costs by 90%+.</p>
-            <div class="tech-tags">
-              <span class="tech-tag">Go</span>
-              <span class="tech-tag">Kafka</span>
-              <span class="tech-tag">Kubernetes</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience" class="experience">
-    <h2>Experience</h2>
-    <div class="experience-grid">
-      <div class="job-card amazon-card">
-        <div class="job-logo">
-          <i class="fab fa-amazon"></i>
-        </div>
-        <div class="job-content">
-          <div class="job-header">
-            <h3>Software Engineer</h3>
-            <div class="job-company">Amazon – AGI Autonomy</div>
-          </div>
-          <div class="job-period">May 2025 – Present</div>
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Languages</h3>
           <ul>
-            <li>Designed Python pipelines for large-scale datasets, improving model performance by 15–20%</li>
-            <li>Engineered SQL queries and data validation schemas, increasing LLM accuracy by 25%</li>
-            <li>Built trace-capture automation tool with event-level instrumentation for AI training</li>
+            <li>Python</li>
+            <li>Java</li>
+            <li>JavaScript / TypeScript</li>
+            <li>Go</li>
+            <li>C/C++</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Backend & Frameworks</h3>
+          <ul>
+            <li>Spring Boot</li>
+            <li>FastAPI / Flask</li>
+            <li>Node.js</li>
+            <li>gRPC</li>
+            <li>REST APIs</li>
+            <li>Microservices</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Data & Cloud</h3>
+          <ul>
+            <li>Apache Spark</li>
+            <li>Kafka</li>
+            <li>AWS</li>
+            <li>Docker / Kubernetes</li>
+            <li>CI/CD</li>
+            <li>Terraform</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Databases</h3>
+          <ul>
+            <li>PostgreSQL</li>
+            <li>MySQL / Oracle</li>
+            <li>MongoDB</li>
+            <li>Query Optimization</li>
+            <li>Data Modeling</li>
+            <li>Caching</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Frontend</h3>
+          <ul>
+            <li>React / TypeScript</li>
+            <li>Angular</li>
+            <li>HTML5 / CSS3</li>
+            <li>Responsive Design</li>
+            <li>Modern Patterns</li>
+            <li>UI/UX</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>AI/ML & Tools</h3>
+          <ul>
+            <li>LLMs & RAG</li>
+            <li>TensorFlow / PyTorch</li>
+            <li>NumPy / Pandas</li>
+            <li>Git / GitHub</li>
+            <li>Agile / Scrum</li>
+            <li>System Design</li>
           </ul>
         </div>
       </div>
+    </section>
 
-      <div class="job-card adobe-card">
-        <div class="job-logo">
-          <i class="fab fa-adobe"></i>
-        </div>
-        <div class="job-content">
-          <div class="job-header">
-            <h3>Software Engineer</h3>
-            <div class="job-company">Adobe – Journey Optimizer</div>
-          </div>
-          <div class="job-period">Sep 2023 – Apr 2025</div>
-          <ul>
-            <li>Architected AI agent in Python for loyalty-based ad campaign recommendations</li>
-            <li>Developed backend microservices in Go and Python for Herald push-notification service</li>
-            <li>Refactored Kubernetes HPA reducing infrastructure costs by 90%+</li>
-            <li>Built React/TypeScript dashboards and designed Secret Credential Key Store</li>
-          </ul>
-        </div>
+    <section id="contact">
+      <h2>Let's Connect</h2>
+      <p>I'm always interested in discussing new projects, opportunities, and technical challenges.</p>
+      <div class="contact-links">
+        <a href="mailto:matchasaivishal@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://github.com/VishaMatcha" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://linkedin.com/in/sai-vishal-matcha-bb6953215/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://leetcode.com/u/vishalmatcha/" target="_blank"><i class="fas fa-code"></i> LeetCode</a>
+        <a href="tel:+12145314657"><i class="fas fa-phone"></i> +1 (214) 531-4657</a>
       </div>
+    </section>
 
-      <div class="job-card databricks-card">
-        <div class="job-logo">
-          <i class="fas fa-wave-square"></i>
-        </div>
-        <div class="job-content">
-          <div class="job-header">
-            <h3>Associate Software Engineer</h3>
-            <div class="job-company">Databricks</div>
-          </div>
-          <div class="job-period">Jun 2022 – Sep 2023</div>
-          <ul>
-            <li>Engineered scalable ML data pipelines using Apache Spark, reducing response times by 30%</li>
-            <li>Architected CI/CD workflows optimizing data throughput by 35% using Apache Kafka</li>
-            <li>Performed root cause analysis in Spark distributed environment, reducing bugs by 30%</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="job-card rinl-card">
-        <div class="job-logo">
-          <i class="fas fa-industry"></i>
-        </div>
-        <div class="job-content">
-          <div class="job-header">
-            <h3>Software Engineer Intern</h3>
-            <div class="job-company">R.I.N.L. – Rashtriya Ispat Nigam Limited</div>
-          </div>
-          <div class="job-period">Jun 2021 – Jun 2022</div>
-          <ul>
-            <li>Implemented microservices using Spring Boot and FastAPI for real-time logistics tracking</li>
-            <li>Created cloud-native dashboards in React and Angular with Plotly Dash</li>
-            <li>Optimized PostgreSQL databases with indexing and caching, reducing latency by 40%</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills" class="skills">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-group">
-        <h3>Languages</h3>
-        <ul>
-          <li>Python</li>
-          <li>Java</li>
-          <li>JavaScript / TypeScript</li>
-          <li>Go</li>
-          <li>C/C++</li>
-          <li>SQL</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <h3>Backend & Frameworks</h3>
-        <ul>
-          <li>Spring Boot</li>
-          <li>FastAPI / Flask</li>
-          <li>Node.js</li>
-          <li>gRPC</li>
-          <li>REST APIs</li>
-          <li>Microservices</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <h3>Data & Cloud</h3>
-        <ul>
-          <li>Apache Spark</li>
-          <li>Kafka</li>
-          <li>AWS (EC2, S3, Lambda, RDS)</li>
-          <li>Docker / Kubernetes</li>
-          <li>CI/CD Pipelines</li>
-          <li>Terraform</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <h3>Databases</h3>
-        <ul>
-          <li>PostgreSQL</li>
-          <li>MySQL / Oracle</li>
-          <li>MongoDB</li>
-          <li>Query Optimization</li>
-          <li>Data Modeling</li>
-          <li>Indexing & Caching</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <h3>Frontend</h3>
-        <ul>
-          <li>React / TypeScript</li>
-          <li>Angular</li>
-          <li>HTML5 / CSS3</li>
-          <li>Responsive Design</li>
-          <li>Modern UI Patterns</li>
-          <li>Component Architecture</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <h3>AI/ML & Tools</h3>
-        <ul>
-          <li>LLMs & RAG</li>
-          <li>TensorFlow / PyTorch</li>
-          <li>NumPy / Pandas</li>
-          <li>Git / GitHub</li>
-          <li>Agile / Scrum</li>
-          <li>System Design</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Let's Work Together</h2>
-    <p>I'm always interested in discussing new projects, opportunities, and challenging problems.</p>
-    <div class="contact-links">
-      <a href="mailto:matchasaivishal@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-      <a href="https://github.com/VishaMatcha" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-      <a href="https://linkedin.com/in/sai-vishal-matcha-bb6953215/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      <a href="https://leetcode.com/u/vishalmatcha/" target="_blank"><i class="fas fa-code"></i> LeetCode</a>
-      <a href="tel:+12145314657"><i class="fas fa-phone"></i> Call</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2026 Sai Vishal Matcha. All rights reserved.</p>
-  </footer>
+    <footer>
+      <p>&copy; 2026 Sai Vishal Matcha. All rights reserved.</p>
+    </footer>
+  </div>
 
   <script>
     // Smooth scroll for nav links
@@ -1089,30 +1038,6 @@
         }
       }, 30);
     }
-
-    // Stacking projects animation
-    window.addEventListener('scroll', () => {
-      const projectStacks = document.querySelectorAll('.project-stack');
-      const projectsContainer = document.querySelector('.projects-container');
-
-      if (!projectsContainer) return;
-
-      const containerTop = projectsContainer.getBoundingClientRect().top;
-      const containerHeight = projectsContainer.clientHeight;
-      const viewportHeight = window.innerHeight;
-
-      const scrollProgress = Math.max(0, Math.min(1, (viewportHeight / 2 - containerTop) / containerHeight));
-
-      projectStacks.forEach((stack, index) => {
-        const stackProgress = Math.max(0, (scrollProgress - index * 0.15) / 0.4);
-        const translateY = stackProgress * 60;
-        const scale = 0.95 + stackProgress * 0.05;
-        const opacity = 0.7 + stackProgress * 0.3;
-
-        stack.style.transform = `translateY(${translateY}px) scale(${scale})`;
-        stack.style.opacity = opacity;
-      });
-    });
   </script>
 </body>
 </html>
