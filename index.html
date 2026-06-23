@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sai Vishal Matcha - Full-Stack Software Engineer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      color: #e2e8f0;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      min-height: 100vh;
+    }
+
+    header {
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #3b82f6;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #e2e8f0;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #3b82f6;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #3b82f6, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #cbd5e1;
+      margin-bottom: 2rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #3b82f6;
+      color: white;
+      padding: 0.75rem 2rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      transition: background 0.3s;
+      margin: 0 0.5rem;
+    }
+
+    .cta-button:hover {
+      background: #60a5fa;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #60a5fa;
+    }
+
+    .about-content {
+      background: rgba(30, 41, 59, 0.5);
+      padding: 2rem;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      margin-bottom: 2rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .skill-card {
+      background: rgba(30, 41, 59, 0.5);
+      padding: 2rem;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      border-color: #3b82f6;
+    }
+
+    .skill-card h3 {
+      color: #3b82f6;
+      margin-bottom: 1rem;
+    }
+
+    .skill-card ul {
+      list-style: none;
+    }
+
+    .skill-card li {
+      padding: 0.5rem 0;
+      color: #cbd5e1;
+    }
+
+    .experience-item {
+      background: rgba(30, 41, 59, 0.5);
+      padding: 2rem;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      margin-bottom: 2rem;
+    }
+
+    .experience-item h3 {
+      color: #60a5fa;
+      margin-bottom: 0.5rem;
+    }
+
+    .experience-item .role {
+      color: #3b82f6;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .experience-item .date {
+      color: #94a3b8;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: rgba(30, 41, 59, 0.5);
+      padding: 2rem;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: #3b82f6;
+    }
+
+    .project-card h3 {
+      color: #60a5fa;
+      margin-bottom: 1rem;
+    }
+
+    .project-card a {
+      color: #3b82f6;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .project-card a:hover {
+      color: #60a5fa;
+    }
+
+    .contact-section {
+      text-align: center;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-links a {
+      color: #3b82f6;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    .contact-links a:hover {
+      color: #60a5fa;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #64748b;
+      border-top: 1px solid rgba(59, 130, 246, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      nav ul {
+        gap: 1rem;
+        font-size: 0.9rem;
+      }
+
+      section {
+        padding: 2rem 1rem;
+      }
+
+      h2 {
+        font-size: 1.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Sai Vishal</div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero">
+    <div>
+      <h1>Full-Stack Software Engineer</h1>
+      <p>Building scalable systems and innovative solutions</p>
+      <div>
+        <a href="#projects" class="cta-button">View My Work</a>
+        <a href="#contact" class="cta-button">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <p>I'm a full-stack software engineer with 5+ years of experience building scalable web applications, APIs, and cloud infrastructure. I specialize in modern web technologies and have a strong background in both frontend and backend development.</p>
+      <p style="margin-top: 1rem;">Currently pursuing a Master's degree in Computer Science at UC Riverside while actively contributing to innovative projects. Passionate about clean code, system design, and solving complex technical challenges.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Frontend</h3>
+        <ul>
+          <li>React / TypeScript</li>
+          <li>Tailwind CSS</li>
+          <li>HTML5 / CSS3</li>
+          <li>Responsive Design</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Backend</h3>
+        <ul>
+          <li>Node.js / Express</li>
+          <li>Python / FastAPI</li>
+          <li>Go / gRPC</li>
+          <li>RESTful APIs</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Database & Infrastructure</h3>
+        <ul>
+          <li>PostgreSQL / MongoDB</li>
+          <li>Docker & Kubernetes</li>
+          <li>AWS / GCP</li>
+          <li>CI/CD Pipelines</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Tools & Practices</h3>
+        <ul>
+          <li>Git / GitHub</li>
+          <li>Testing (Unit, Integration)</li>
+          <li>Agile / Scrum</li>
+          <li>System Design</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="experience-item">
+      <h3>Software Engineer</h3>
+      <div class="role">Full-Stack Development</div>
+      <div class="date">2019 - Present</div>
+      <p>Designed and implemented scalable web applications, optimized database queries achieving 40% performance improvement, and led migration of legacy systems to microservices architecture using Go and gRPC.</p>
+    </div>
+    <div class="experience-item">
+      <h3>Backend Developer</h3>
+      <div class="role">API Development & Database Design</div>
+      <div class="date">2018 - 2019</div>
+      <p>Built robust RESTful APIs handling 10k+ requests/sec, implemented caching strategies reducing response times by 50%, and designed database schemas for high-throughput applications.</p>
+    </div>
+    <div class="experience-item">
+      <h3>Junior Developer</h3>
+      <div class="role">Web Development</div>
+      <div class="date">2017 - 2018</div>
+      <p>Developed responsive web applications using React and Node.js, collaborated with cross-functional teams, and contributed to open-source projects.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Speechify Assessment</h3>
+        <p>Comprehensive technical assessment addressing credential security, query optimization, error handling, and CI/CD improvements. Implemented bcrypt password hashing, batch query optimization, and automated testing.</p>
+        <a href="https://github.com/VishaMatcha/speechify" target="_blank">View on GitHub →</a>
+      </div>
+      <div class="project-card">
+        <h3>RINL Logistics Tracker</h3>
+        <p>Full-stack logistics management system with Docker-based deployment. Features real-time tracking, PostgreSQL database optimization, and Kubernetes orchestration.</p>
+        <a href="https://github.com/VishaMatcha/rinl-logistics-tracker" target="_blank">View on GitHub →</a>
+      </div>
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>Interactive portfolio showcasing professional projects and skills. Built with modern web technologies and deployed on GitHub Pages with automated CI/CD.</p>
+        <a href="https://github.com/VishaMatcha/saivishal-portfolio" target="_blank">View on GitHub →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2>Get in Touch</h2>
+    <p>I'm always interested in discussing new projects and opportunities.</p>
+    <div class="contact-links">
+      <a href="mailto:nivasverelli@gmail.com">Email</a>
+      <a href="https://github.com/VishaMatcha" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/sai-vishal-matcha" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Sai Vishal Matcha. All rights reserved.</p>
+  </footer>
+</body>
+</html>
